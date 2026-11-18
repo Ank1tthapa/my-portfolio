@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Er. Ankit Thapa — AI Engineer &amp; ML Enthusiast</title>
+  <meta name="description" content="Er. Ankit Thapa — AI Engineer and ML enthusiast in Kathmandu, Nepal. Python, machine learning, deep learning and generative AI, built project by project." />
+  <meta name="theme-color" content="#090B0F" />
+
+  <!-- Apply a saved light theme before first paint (dark is the default) -->
+  <script>
+    (function () {
+      try {
+        if (localStorage.getItem("theme") === "light") {
+          document.documentElement.classList.add("light");
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23090B0F'/><circle cx='50' cy='50' r='13' fill='%23C6FF4D'/></svg>" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- ?v= busts stale caches after a deploy; bump it when you change either file -->
+  <link rel="stylesheet" href="styles.css?v=2" />
+</head>
+<body>
+
+  <!-- Page-wide ambient particle field (decorative) -->
+  <canvas id="neuralBg" class="neural-bg" aria-hidden="true"></canvas>
+  <div class="page-glow" aria-hidden="true"></div>
+
+  <!-- ============================= HEADER ============================= -->
+  <header class="site-header">
+    <a href="#home" class="logo">
+      <span class="logo-mark" aria-hidden="true"></span>
+      Er. Ankit Thapa
+    </a>
+
+    <div class="header-right">
+      <nav class="nav" id="nav" aria-label="Sections">
+        <a href="#about" data-nav>About</a>
+        <a href="#skills" data-nav>Skills</a>
+        <a href="#projects" data-nav>Projects</a>
+        <a href="#experience" data-nav>Experience</a>
+        <a href="#education" data-nav>Education</a>
+        <a href="#research" data-nav>Research</a>
+        <a href="#exploring" data-nav>Exploring</a>
+        <a href="#terminal" data-nav>Terminal</a>
+        <a href="#contact" data-nav>Contact</a>
+      </nav>
+
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch to light theme" aria-pressed="false">
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4" /><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4" /></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" /></svg>
+      </button>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============================= HERO ============================= -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-text reveal">
+          <p class="status"><span class="status-dot"></span>Available for internships &amp; junior roles<span class="status-sep">/</span>Kathmandu, Nepal</p>
+
+          <h1>Er. Ankit <span class="grad">Thapa</span></h1>
+          <p class="hero-title">AI Engineer <span aria-hidden="true">|</span> ML Enthusiast</p>
+          <p class="hero-headline">Engineering Intelligence.<br /><span class="grad">Building What Comes Next.</span></p>
+          <p class="hero-intro">I build with Python across machine learning, deep learning and generative AI — small, honest systems I can explain end to end, from data cleaning to the query that gets answered.</p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">Explore Projects <span class="arrow">&rarr;</span></a>
+            <a href="#contact" class="btn btn-ghost">Contact Me <span class="arrow">&rarr;</span></a>
+          </div>
+
+          <ul class="socials">
+            <li><a href="https://github.com/ankitthapa" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z" /></svg>
+              GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/ankitthapa" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.94 8.5H4.1V20h2.84V8.5ZM5.52 4a1.7 1.7 0 1 0 0 3.4 1.7 1.7 0 0 0 0-3.4ZM20 13.57c0-3.13-1.67-4.59-3.9-4.59-1.8 0-2.6.99-3.05 1.68V8.5H10.2c.04.79 0 11.5 0 11.5h2.85v-6.42c0-.26.02-.51.1-.7.2-.51.67-1.03 1.45-1.03 1.02 0 1.43.78 1.43 1.93V20H20v-6.43Z" /></svg>
+              LinkedIn</a></li>
+            <li><a href="https://x.com/ankitthapa" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.7 3h3.3l-7.2 8.23L22 21h-6.6l-5.17-6.76L4.3 21H1l7.7-8.8L1.6 3h6.77l4.67 6.18L17.7 3Zm-1.16 16.13h1.84L7.55 4.78H5.58l10.96 14.35Z" /></svg>
+              X</a></li>
+          </ul>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="visual-frame">
+            <div class="visual-bar">
+              <span class="mono">NEURAL_CORE</span>
+              <span class="live"><i></i>LIVE</span>
+            </div>
+
+            <canvas id="neuralHero" aria-hidden="true"></canvas>
+
+            <div class="visual-meta">
+              <div><span class="mono">NODES</span><b id="nodeCount">0</b></div>
+              <div><span class="mono">EDGES</span><b id="edgeCount">0</b></div>
+              <div><span class="mono">INPUT</span><b>POINTER</b></div>
+            </div>
+            <p class="visual-hint mono">move cursor to activate</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= ABOUT ============================= -->
+    <section class="section" id="about">
+      <div class="container">
+        <header class="section-head reveal">
+          <div>
+            <p class="section-label mono">01 &mdash; About</p>
+            <h2 class="section-title">A bit about me</h2>
+          </div>
+          <span class="section-note mono">PROFILE</span>
+        </header>
+
+        <div class="about-grid">
+          <figure class="about-photo reveal">
+            <div class="photo-frame">
+              <img src="images/you.jpg" alt="Portrait of Er. Ankit Thapa" onerror="this.hidden = true" />
+              <span class="photo-monogram">AT</span>
+            </div>
+            <figcaption class="mono">KATHMANDU, NP &middot; UTC+5:45</figcaption>
+          </figure>
+
+          <div class="about-copy reveal">
+            <p class="about-lede">I'm an aspiring AI engineer with a strong interest in artificial intelligence, machine learning and emerging technologies.</p>
+            <p>Most of my time goes into strengthening my programming, especially Python, and exploring machine learning, deep learning and generative AI. I learn best by building: picking a small real problem, reading until I understand the pieces, then shipping something that runs.</p>
+            <p>I enjoy solving real-world problems through intelligent systems, automation and data-driven solutions. My goal is to keep growing as an engineer and contribute to AI-powered products that are useful, efficient and genuinely impactful.</p>
+
+            <dl class="facts">
+              <div><dt class="mono">Focus</dt><dd>ML, deep learning &amp; generative AI</dd></div>
+              <div><dt class="mono">Experience</dt><dd>Early career, project-driven</dd></div>
+              <div><dt class="mono">Currently</dt><dd>Learning &amp; building in public</dd></div>
+            </dl>
+
+            <!-- Replace resume.pdf with your real file, or delete this button. -->
+            <a href="resume.pdf" class="btn btn-ghost btn-small" download>Download résumé <span class="arrow">&darr;</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= SKILLS ============================= -->
+    <section class="section section-alt" id="skills">
+      <div class="container">
+        <header class="section-head reveal">
+          <div>
+            <p class="section-label mono">02 &mdash; Skills</p>
+            <h2 class="section-title">What I work with</h2>
+          </div>
+          <span class="section-note mono">STACK</span>
+        </header>
+
+        <div class="skills-grid">
+          <article class="skill-card reveal">
+            <p class="skill-kicker mono">// 01 programming</p>
+            <h3>Programming</h3>
+            <ul class="tags"><li>Python</li><li>SQL basics</li></ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <p class="skill-kicker mono">// 02 machine learning</p>
+            <h3>Machine Learning</h3>
+            <ul class="tags"><li>scikit-learn</li><li>Feature engineering</li><li>Model evaluation</li></ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <p class="skill-kicker mono">// 03 deep learning</p>
+            <h3>Deep Learning</h3>
+            <ul class="tags"><li>PyTorch</li><li>CNNs</li><li>Training loops</li></ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <p class="skill-kicker mono">// 04 generative ai</p>
+            <h3>Generative AI</h3>
+            <ul class="tags"><li>LLM APIs</li><li>Prompt design</li><li>Retrieval (RAG)</li></ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <p class="skill-kicker mono">// 05 data science</p>
+            <h3>Data Science</h3>
+            <ul class="tags"><li>NumPy</li><li>pandas</li><li>Matplotlib</li></ul>
+          </article>
+
+          <article class="skill-card reveal">
+            <p class="skill-kicker mono">// 06 tools &amp; development</p>
+            <h3>Tools &amp; Development</h3>
+            <ul class="tags"><li>Git &amp; GitHub</li><li>Jupyter Notebook</li><li>VS Code</li></ul>
+          </article>
+
+          <article class="skill-card skill-card-note reveal">
+            <p class="skill-kicker mono">// 07 deployment</p>
+            <h3>Deployment</h3>
+            <ul class="tags"><li>Streamlit</li></ul>
+            <p class="skill-note">Currently the extent of it — results are shipped as Streamlit apps. Docker and cloud hosting come with the first project that needs them.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= PROJECTS =============================
+         To add a project: copy one <article class="project"> block.
+         Repo links: replace the href on "Source code". Add a live URL to the
+         Live demo span (turn it into an <a>) only when one exists.
+         ================================================================== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <header class="section-head reveal">
+          <div>
+            <p class="section-label mono">03 &mdash; Projects</p>
+            <h2 class="section-title">Things I've built</h2>
+          </div>
+          <span class="section-note mono">03 ENTRIES</span>
+        </header>
+
+        <div class="projects-grid">
+
+          <article class="project reveal">
+            <div class="project-thumb">
+              <!-- Swap for a real screenshot any time: keep the <img>, change src + alt -->
+              <img src="images/project-study-assistant.jpg" alt="AI Study Assistant project banner" width="1100" height="600" loading="lazy" decoding="async" />
+              <span class="project-index mono">01</span>
+              <span class="project-glyph">study_assistant.py</span>
+            </div>
+            <div class="project-body">
+              <div class="project-top">
+                <p class="project-year mono">2025</p>
+                <span class="project-status mono">BUILT</span>
+              </div>
+              <h3>AI Study Assistant</h3>
+              <p>A chatbot that answers questions from my own lecture notes: the notes are split into chunks, embedded, and the closest ones are passed to an LLM as context. Built to understand retrieval and prompt design rather than to trust a demo.</p>
+              <ul class="tags tags-small"><li>Python</li><li>LLM APIs</li><li>Streamlit</li></ul>
+
+              <div class="pipeline" data-pipeline>
+                <p class="pipeline-title mono">architecture</p>
+                <div class="pipeline-steps" role="tablist" aria-label="AI Study Assistant architecture">
+                  <button type="button" role="tab" aria-selected="true" aria-controls="p1-0" id="t1-0" class="step is-active">Upload</button>
+                  <button type="button" role="tab" aria-selected="false" aria-controls="p1-1" id="t1-1" class="step">Extract</button>
+                  <button type="button" role="tab" aria-selected="false" aria-controls="p1-2" id="t1-2" class="step">Chunk</button>
+                  <button type="button" role="tab" aria-selected="false" aria-controls="p1-3" id="t1-3" class="step">Embed</button>
+                  <button type="button" role="tab" aria-selected="false" aria-controls="p1-4" id="t1-4" class="step">Search</button>
+                  <button type="button" role="tab" aria-selected="false" aria-controls="p1-5" id="t1-5" class="step">LLM</button>
+                  <button type="button" role="tab" aria-selected="false" aria-controls="p1-6" id="t1-6" class="step">Answer</button>
+                </div>
+                <div class="pipeline-panel" role="tabpanel" id="p1-0" aria-labelledby="t1-0" tabindex="0">
+                  <h4>Document upload</h4>
+                  <p>Notes are added through the Streamlit sidebar and read into the session on upload.</p>
+                </div>
+                <div class="pipeline-panel" role="tabpanel" id="p1-1" aria-labelledby="t1-1" tabindex="0" hidden>
+                  <h4>Text extraction</h4>
+                  <p>Raw text is pulled out of each file and cleaned up — whitespace, page breaks, stray headers.</p>
+                </div>
+                <div class="pipeline-panel" role="tabpanel" id="p1-2" aria-labelledby="t1-2" tabindex="0" hidden>
+                  <h4>Chunking</h4>
+                  <p>Long text is split into overlapping chunks, sized so each one carries enough context to be useful on its own.</p>
+                </div>
+                <div class="pipeline-panel" role="tabpanel" id="p1-3" aria-labelledby="t1-3" tabindex="0" hidden>
+                  <h4>Embeddings</h4>
+                  <p>Every chunk becomes a vector, so similarity becomes arithmetic rather than keyword matching.</p>
+                </div>
+                <div class="pipeline-panel" role="tabpanel" id="p1-4" aria-labelledby="t1-4" tabindex="0" hidden>
+                  <h4>Vector search</h4>
+                  <p>The question is embedded the same way and the nearest chunks are returned.</p>
+                </div>
+                <div class="pipeline-panel" role="tabpanel" id="p1-5" aria-labelledby="t1-5" tabindex="0" hidden>
+                  <h4>LLM</h4>
+                  <p>Retrieved chunks and the question are assembled into one prompt and sent to the model.</p>
+                </div>
+                <div class="pipeline-panel" role="tabpanel" id="p1-6" aria-labelledby="t1-6" tabindex="0" hidden>
+                  <h4>Answer</h4>
+                  <p>The answer is grounded in retrieved notes, so it can be checked against the source instead of trusted blindly.</p>
+                </div>
+              </div>
+
+              <details class="case-study">
+                <summary>Technical case study</summary>
+                <div class="case-body">
+                  <h4 class="mono">/ problem</h4>
+                  <p>Asking a model about my own coursework gave confident answers that were not in my notes. The real problem was retrieval, not generation.</p>
+                  <h4 class="mono">/ approach</h4>
+                  <p>Keep the model out of the storage layer: embed the notes once, retrieve per question, and pass only the relevant chunks as context.</p>
+                  <h4 class="mono">/ challenges</h4>
+                  <p>Chunk size traded context against precision — chunks too small lost the surrounding argument, chunks too large buried the matching sentence in noise.</p>
+                  <h4 class="mono">/ lessons</h4>
+                  <p>Retrieval quality sets the ceiling on answer quality. Prompt tweaks only help once the retrieved context is already right.</p>
+                  <!-- Add verified results or screenshots here. -->
+                </div>
+              </details>
+
+              <div class="project-links">
+                <!-- Live demo exists? Replace the span with: <a href="URL" target="_blank" rel="noopener">Live demo ↗</a> -->
+                <span class="link-muted">Live demo &mdash; not deployed</span>
+                <a href="https://github.com/ankitthapa" target="_blank" rel="noopener" data-replace-url>Source code <span aria-hidden="true">&nearr;</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <div class="project-thumb">
+              <!-- Swap for a real screenshot any time: keep the <img>, change src + alt -->
+              <img src="images/project-recommender.jpg" alt="Movie Recommendation System project banner" width="1100" height="600" loading="lazy" decoding="async" />
+              <span class="project-index mono">02</span>
+              <span class="project-glyph">recommender.ipynb</span>
+            </div>
+            <div class="project-body">
+              <div class="project-top">
+                <p class="project-year mono">2025</p>
+                <span class="project-status mono">BUILT</span>
+              </div>
+              <h3>Movie Recommendation System</h3>
+              <p>A content-based recommender over a public film dataset — cleaning with pandas, features built from genres and keywords, and cosine similarity to find near matches. Served through a small Streamlit interface.</p>
+              <ul class="tags tags-small"><li>pandas</li><li>scikit-learn</li><li>Streamlit</li></ul>
+
+              <div class="pipeline" data-pipeline>
+                <p class="pipeline-title mono">architecture</p>
+                <div class="pipeline-steps" role="tablist" aria-label="Movie recommender architecture">
+                  <button type="button" role="tab" aria-selected="true" aria-controls="p2-0" id="t2-0" class="step is-active">Dataset</button>
+                  <button type="button" role="tab" aria-selected="false" aria-controls="p2-1" id="t2-1" class="step">Cleaning</button>
+                  <button type="button" role="tab" aria-selected="false" aria-controls="p2-2" id="t2-2" class="step">Features</button>
+                  <button type="button" role="tab" aria-selected="false" aria-controls="p2-3" id="t2-3" class="step">Similarity</button>
+                  <button type="button" role="tab" aria-selected="false" aria-controls="p2-4" id="t2-4" class="step">Results</button>
+                </div>
+                <div class="pipeline-panel" role="tabpanel" id="p2-0" aria-labelledby="t2-0" tabindex="0">
+                  <h4>Dataset</h4>
+                  <p>Public film metadata loaded into a pandas DataFrame — titles, genres, keywords, overview text.</p>
+                </div>
+                <div class="pipeline-panel" role="tabpanel" id="p2-1" aria-labelledby="t2-1" tabindex="0" hidden>
+                  <h4>Data cleaning</h4>
+                  <p>Nulls and duplicates removed, and the JSON-looking columns parsed into usable lists. This was the largest part of the work.</p>
+                </div>
+                <div class="pipeline-panel" role="tabpanel" id="p2-2" aria-labelledby="t2-2" tabindex="0" hidden>
+                  <h4>Feature extraction</h4>
+                  <p>Genres and keywords are merged into one text field per film, then vectorised — the representation decides what counts as "similar".</p>
+                </div>
+                <div class="pipeline-panel" role="tabpanel" id="p2-3" aria-labelledby="t2-3" tabindex="0" hidden>
+                  <h4>Similarity</h4>
+                  <p>Cosine similarity between film vectors. No user ratings involved — it recommends by resemblance, not by watching behaviour.</p>
+                </div>
+                <div class="pipeline-panel" role="tabpanel" id="p2-4" aria-labelledby="t2-4" tabindex="0" hidden>
+                  <h4>Recommendations</h4>
+                  <p>Top nearest titles returned through a small Streamlit view that picks a film and lists its neighbours.</p>
+                </div>
+              </div>
+
+              <details class="case-study">
+                <summary>Technical case study</summary>
+                <div class="case-body">
+                  <h4 class="mono">/ problem</h4>
+                  <p>Recommendations should not need a ratings database. Content alone can get surprisingly far.</p>
+                  <h4 class="mono">/ approach</h4>
+                  <p>Represent each film as a bag of its genres and keywords, then rank every other film by cosine similarity to it.</p>
+                  <h4 class="mono">/ challenges</h4>
+                  <p>Messy nested fields and a heavily skewed long tail: obscure films with thin metadata match badly no matter the metric.</p>
+                  <h4 class="mono">/ lessons</h4>
+                  <p>Feature design did most of the work. The model itself was a few lines; the cleaning was the project.</p>
+                </div>
+              </details>
+
+              <div class="project-links">
+                <span class="link-muted">Live demo &mdash; not deployed</span>
+                <a href="https://github.com/ankitthapa" target="_blank" rel="noopener" data-replace-url>Source code <span aria-hidden="true">&nearr;</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal">
+            <div class="project-thumb">
+              <!-- Swap for a real screenshot any time: keep the <img>, change src + alt -->
+              <img src="images/project-digit-classifier.jpg" alt="Handwritten Digit Classifier project banner" width="1100" height="600" loading="lazy" decoding="async" />
+              <span class="project-index mono">03</span>
+              <span class="project-glyph">cnn_mnist.py</span>
+            </div>
+            <div class="project-body">
+              <div class="project-top">
+                <p class="project-year mono">2024</p>
+                <span class="project-status mono">BUILT</span>
+              </div>
+              <h3>Handwritten Digit Classifier</h3>
+              <p>My first real deep learning project: a convolutional network in PyTorch trained on MNIST, with training curves, a confusion matrix and a drawing canvas so I could test it on my own handwriting.</p>
+              <ul class="tags tags-small"><li>PyTorch</li><li>NumPy</li><li>Matplotlib</li></ul>
+
+              <div class="pipeline" data-pipeline>
+                <p class="pipeline-title mono">architecture</p>
+                <div class="pipeline-steps" role="tablist" aria-label="Digit classifier architecture">
+                  <button type="button" role="tab" aria-selected="true" aria-controls="p3-0" id="t3-0" class="step is-active">MNIST</button>
+                  <button type="button" role="tab" aria-selected="false" aria-controls="p3-1" id="t3-1" class="step">Preprocess</button>
+                  <button type="button" role="tab" aria-selected="false" aria-controls="p3-2" id="t3-2" class="step">CNN</button>
+                  <button type="button" role="tab" aria-selected="false" aria-controls="p3-3" id="t3-3" class="step">Train</button>
+                  <button type="button" role="tab" aria-selected="false" aria-controls="p3-4" id="t3-4" class="step">Evaluate</button>
+                  <button type="button" role="tab" aria-selected="false" aria-controls="p3-5" id="t3-5" class="step">Predict</button>
+                </div>
+                <div class="pipeline-panel" role="tabpanel" id="p3-0" aria-labelledby="t3-0" tabindex="0">
+                  <h4>MNIST dataset</h4>
+                  <p>28×28 grayscale digits used for training and testing, split into train and evaluation sets.</p>
+                </div>
+                <div class="pipeline-panel" role="tabpanel" id="p3-1" aria-labelledby="t3-1" tabindex="0" hidden>
+                  <h4>Preprocessing</h4>
+                  <p>Tensors normalised to a fixed scale, and canvas drawings resized and centred so they resemble the training distribution.</p>
+                </div>
+                <div class="pipeline-panel" role="tabpanel" id="p3-2" aria-labelledby="t3-2" tabindex="0" hidden>
+                  <h4>CNN</h4>
+                  <p>Convolution and pooling layers that learn strokes and edges, followed by fully connected layers producing ten class scores.</p>
+                </div>
+                <div class="pipeline-panel" role="tabpanel" id="p3-3" aria-labelledby="t3-3" tabindex="0" hidden>
+                  <h4>Training</h4>
+                  <p>Mini-batch training over several epochs with cross-entropy loss and an optimiser, tracking loss and accuracy per epoch.</p>
+                </div>
+                <div class="pipeline-panel" role="tabpanel" id="p3-4" aria-labelledby="t3-4" tabindex="0" hidden>
+                  <h4>Evaluation</h4>
+                  <p>A confusion matrix rather than one accuracy number, to see which digits get confused with which.</p>
+                </div>
+                <div class="pipeline-panel" role="tabpanel" id="p3-5" aria-labelledby="t3-5" tabindex="0" hidden>
+                  <h4>Prediction</h4>
+                  <p>A drawing canvas feeds the model directly, so the failures are in my own handwriting rather than in a test set.</p>
+                </div>
+              </div>
+
+              <details class="case-study">
+                <summary>Technical case study</summary>
+                <div class="case-body">
+                  <h4 class="mono">/ problem</h4>
+                  <p>Learn the mechanics of training a network, not just call a library function.</p>
+                  <h4 class="mono">/ approach</h4>
+                  <p>A small CNN in PyTorch with an explicit training loop, plus a canvas interface to test it on inputs it had never seen.</p>
+                  <h4 class="mono">/ challenges</h4>
+                  <p>My handwriting broke it far more often than the test set suggested, which pointed at preprocessing rather than architecture.</p>
+                  <h4 class="mono">/ lessons</h4>
+                  <p>Centring and normalising the input mattered as much as the layer stack. A confusion matrix told me more than accuracy alone.</p>
+                </div>
+              </details>
+
+              <div class="project-links">
+                <span class="link-muted">Live demo &mdash; not deployed</span>
+                <a href="https://github.com/ankitthapa" target="_blank" rel="noopener" data-replace-url>Source code <span aria-hidden="true">&nearr;</span></a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= EXPERIENCE ============================= -->
+    <section class="section section-alt" id="experience">
+      <div class="container">
+        <header class="section-head reveal">
+          <div>
+            <p class="section-label mono">04 &mdash; Experience</p>
+            <h2 class="section-title">How I've been learning</h2>
+          </div>
+          <span class="section-note mono">TIMELINE</span>
+        </header>
+
+        <ol class="timeline">
+          <li class="timeline-item reveal">
+            <p class="timeline-date mono">2025 — PRESENT</p>
+            <h3>Building AI Projects</h3>
+            <p class="timeline-company">Independent &middot; Kathmandu, Nepal</p>
+            <p>Working through one project at a time — a retrieval-based study assistant, a recommender, and experiments with generative AI tooling. Each one is written up and pushed to GitHub so the process, not just the result, is visible.</p>
+          </li>
+
+          <li class="timeline-item reveal">
+            <p class="timeline-date mono">2024 — 2025</p>
+            <h3>Machine Learning &amp; Deep Learning Foundations</h3>
+            <p class="timeline-company">Self-directed study &middot; Online</p>
+            <p>Built up Python fundamentals, then moved through core machine learning, neural networks and deep learning, learning the maths behind each model before using a library to implement it.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============================= EDUCATION =============================
+         Duplicate an <li> per entry. Study years are optional — add them to
+         .timeline-date when you want them shown.
+         ==================================================================== -->
+    <section class="section" id="education">
+      <div class="container">
+        <header class="section-head reveal">
+          <div>
+            <p class="section-label mono">05 &mdash; Education</p>
+            <h2 class="section-title">Education</h2>
+          </div>
+          <span class="section-note mono">NEC LICENSED</span>
+        </header>
+
+        <ol class="timeline">
+          <li class="timeline-item reveal">
+            <p class="timeline-date mono">Undergraduate degree &middot; completed</p>
+            <h3>Institute of Engineering, Tribhuvan University</h3>
+            <p class="timeline-company">BE Computer Engineering &middot; Kathmandu, Nepal</p>
+            <p>Computer engineering at IOE — algorithms and systems first, then the AI and machine-learning work that this site documents.</p>
+
+            <p class="edu-meta mono">Core coursework</p>
+            <ul class="tags tags-small">
+              <li>Computer Programming</li>
+              <li>Object Oriented Programming</li>
+              <li>Data Structures &amp; Algorithms</li>
+              <li>Database Management System</li>
+              <li>Operating Systems</li>
+              <li>Computer Organization &amp; Architecture</li>
+              <li>Artificial Intelligence</li>
+              <li>Foundation of Data Science</li>
+              <li>Web Application Programming</li>
+              <li>Distributed &amp; Cloud Computing</li>
+            </ul>
+
+            <!-- Academic achievements, only if you actually have them:
+            <p class="edu-meta mono">Achievements:</p>
+            <p>[ Scholarship, distinction, project award… ]</p>
+            -->
+          </li>
+        </ol>
+
+        <div class="cred-card reveal">
+          <div class="cred-head">
+            <span class="cred-badge mono">LICENSED</span>
+            <span class="mono">Nepal Engineering Council</span>
+          </div>
+          <h3>Licensed Engineer (Er.)</h3>
+          <p>Registered with the Nepal Engineering Council — the credential the "Er." prefix comes from.</p>
+          <p class="edu-meta mono">Registered &middot; licence number available on request</p>
+        </div>
+
+        <p class="section-footnote mono">Course titles follow the IOE BCT curriculum — remove anything you did not take. Add your study years if you want them shown.</p>
+      </div>
+    </section>
+
+    <!-- ============================= RESEARCH ============================= -->
+    <section class="section section-alt" id="research">
+      <div class="container">
+        <header class="section-head reveal">
+          <div>
+            <p class="section-label mono">06 &mdash; Research</p>
+            <h2 class="section-title">Research &amp; Experiments</h2>
+          </div>
+          <span class="section-note mono">READING LOG</span>
+        </header>
+
+        <p class="section-lede reveal">A reading log focused on making AI inference cheaper to run at the edge — three papers on hardware, instruction sets and memory movement.</p>
+
+        <div class="research-grid">
+          <article class="research-card reveal">
+            <p class="research-topic mono">Computer Architecture &middot; Edge AI</p>
+            <h3>A Lightweight Hardware Architecture for Energy-Efficient Edge AI Inference</h3>
+            <p class="research-summary">Edge inference is bounded by energy and area rather than peak throughput. The interesting part is the design space that opens once a smaller accelerator is acceptable in exchange for less energy per inference.</p>
+            <p class="research-notes"><span class="mono">notes:</span> Efficiency is a systems property — data movement and idle power can matter more than a headline multiply-accumulate count.</p>
+            <a class="research-link" href="https://scholar.google.com/scholar?q=%22A+Lightweight+Hardware+Architecture+for+Energy-Efficient+Edge+AI+Inference%22" target="_blank" rel="noopener">Find on Scholar <span aria-hidden="true">&nearr;</span></a>
+          </article>
+
+          <article class="research-card reveal">
+            <p class="research-topic mono">Computer Architecture &middot; RISC-V</p>
+            <h3>Performance and Energy Optimization of RISC-V Processors for Edge AI Applications</h3>
+            <p class="research-summary">An open instruction set is only useful for edge AI if the extended instructions pay for themselves. This looks at where RISC-V extensions and pipeline choices can cut both runtime and energy for the same network.</p>
+            <p class="research-notes"><span class="mono">notes:</span> Relevant to the deployment gap: hardware-level optimisation is the next real step after a model leaves a notebook.</p>
+            <a class="research-link" href="https://scholar.google.com/scholar?q=%22Performance+and+Energy+Optimization+of+RISC-V+Processors+for+Edge+AI+Applications%22" target="_blank" rel="noopener">Find on Scholar <span aria-hidden="true">&nearr;</span></a>
+          </article>
+
+          <article class="research-card reveal">
+            <p class="research-topic mono">Computer Architecture &middot; Compute-in-Memory</p>
+            <h3>Reducing Data Movement in Edge AI Through Compute-in-Memory Architecture</h3>
+            <p class="research-summary">Most of the energy in inference is spent moving weights and activations, not multiplying them. Compute-in-memory attacks that directly by doing the arithmetic where the data already sits.</p>
+            <p class="research-notes"><span class="mono">notes:</span> The open question for me: how much accuracy and flexibility is traded for the energy win, and how that changes model design.</p>
+            <a class="research-link" href="https://scholar.google.com/scholar?q=%22Reducing+Data+Movement+in+Edge+AI+Through+Compute-in-Memory+Architecture%22" target="_blank" rel="noopener">Find on Scholar <span aria-hidden="true">&nearr;</span></a>
+          </article>
+        </div>
+
+        <p class="section-footnote mono">Summaries are written from each title and topic — edit them to match what the paper actually argues. The Scholar links search the exact title.</p>
+      </div>
+    </section>
+
+    <!-- ============================= GITHUB =============================
+         Populated live from the public GitHub API in script.js.
+         Change GITHUB_USER there to point this at your account.
+         ================================================================= -->
+    <section class="section section-alt" id="github">
+      <div class="container">
+        <header class="section-head reveal">
+          <div>
+            <p class="section-label mono">08 &mdash; GitHub</p>
+            <h2 class="section-title">Activity</h2>
+          </div>
+          <span class="section-note mono">PUBLIC API</span>
+        </header>
+
+        <div class="github-panel reveal">
+          <div class="gh-profile" id="ghProfile" data-state="loading">
+            <div class="gh-avatar" id="ghAvatarWrap" aria-hidden="true">
+              <img id="ghAvatar" src="" alt="" hidden />
+              <span class="mono" id="ghAvatarFallback">AT</span>
+            </div>
+            <div class="gh-identity">
+              <h3 id="ghName">Er. Ankit Thapa</h3>
+              <a class="gh-login mono" id="ghLogin" href="https://github.com/ankitthapa" target="_blank" rel="noopener">@ankitthapa</a>
+              <p class="gh-bio" id="ghBio">Loading public profile…</p>
+              <ul class="gh-stats">
+                <li><b id="ghRepos">—</b><span class="mono">repos</span></li>
+                <li><b id="ghFollowers">—</b><span class="mono">followers</span></li>
+                <li><b id="ghFollowing">—</b><span class="mono">following</span></li>
+              </ul>
+            </div>
+            <a class="btn btn-ghost btn-small" id="ghProfileLink" href="https://github.com/ankitthapa" target="_blank" rel="noopener">View profile <span class="arrow">&nearr;</span></a>
+          </div>
+
+          <div class="gh-section">
+            <div class="gh-section-head">
+              <h4 class="mono">FEATURED / RECENT REPOSITORIES</h4>
+              <span class="mono" id="ghReposStatus" role="status" aria-live="polite">Loading…</span>
+            </div>
+            <div class="gh-repos" id="ghRepoList"></div>
+          </div>
+
+          <div class="gh-section">
+            <div class="gh-section-head">
+              <h4 class="mono">CONTRIBUTION ACTIVITY</h4>
+            </div>
+            <p class="gh-note">GitHub's contribution graph needs an authenticated token, so it can't be read from a static page. <a href="https://github.com/ankitthapa" target="_blank" rel="noopener">Open the profile</a> to see it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= EXPLORING =============================
+         Status classes: st-learning, st-experimenting, st-building, st-completed
+         =================================================================== -->
+    <section class="section" id="exploring">
+      <div class="container">
+        <header class="section-head reveal">
+          <div>
+            <p class="section-label mono">07 &mdash; Now</p>
+            <h2 class="section-title">Currently Exploring</h2>
+          </div>
+          <span class="section-note mono">DASHBOARD</span>
+        </header>
+
+        <div class="explore-grid">
+          <article class="explore-item st-building reveal">
+            <div class="explore-top">
+              <span class="explore-status mono"><i></i>Building</span>
+              <span class="explore-kind mono">PROJECT</span>
+            </div>
+            <h3>Retrieval-augmented Q&amp;A</h3>
+            <p>Extending the study assistant: better chunking, a comparison of embedding options, and a small evaluation set so changes can be measured instead of guessed.</p>
+            <a class="explore-link mono" href="#projects">related: AI Study Assistant <span aria-hidden="true">&rarr;</span></a>
+          </article>
+
+          <article class="explore-item st-learning reveal">
+            <div class="explore-top">
+              <span class="explore-status mono"><i></i>Learning</span>
+              <span class="explore-kind mono">STUDY</span>
+            </div>
+            <h3>Transformers from scratch</h3>
+            <p>Implementing attention and a small transformer in PyTorch without a high-level library, to understand the pieces I've only used through APIs.</p>
+            <a class="explore-link mono" href="#research">related: reading log <span aria-hidden="true">&rarr;</span></a>
+          </article>
+
+          <article class="explore-item st-experimenting reveal">
+            <div class="explore-top">
+              <span class="explore-status mono"><i></i>Experimenting</span>
+              <span class="explore-kind mono">LAB</span>
+            </div>
+            <h3>Generative AI tooling</h3>
+            <p>Trying local models and prompt patterns for small utilities — noting what's genuinely useful versus what only looks impressive in a demo.</p>
+            <a class="explore-link mono" href="#research">related: research log <span aria-hidden="true">&rarr;</span></a>
+          </article>
+
+          <article class="explore-item st-completed reveal">
+            <div class="explore-top">
+              <span class="explore-status mono"><i></i>Completed</span>
+              <span class="explore-kind mono">PROJECT</span>
+            </div>
+            <h3>Digit classifier</h3>
+            <p>Convolutional network trained on MNIST with a drawing canvas for live testing. Finished and pushed; the next step is comparing it against a simpler baseline.</p>
+            <a class="explore-link mono" href="#projects">related: Handwritten Digit Classifier <span aria-hidden="true">&rarr;</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================= TERMINAL ============================= -->
+    <section class="section section-alt" id="terminal">
+      <div class="container">
+        <header class="section-head reveal">
+          <div>
+            <p class="section-label mono">08 &mdash; Terminal</p>
+            <h2 class="section-title">Explore My System</h2>
+          </div>
+          <span class="section-note mono">SHELL</span>
+        </header>
+
+        <div class="terminal reveal" id="terminalWindow">
+          <div class="terminal-bar">
+            <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="mono">ankit@neural: ~/portfolio</span>
+            <span class="mono terminal-hint">type <b>help</b></span>
+          </div>
+
+          <div class="terminal-body" id="termOutput" role="log" aria-live="polite" aria-label="Terminal output">
+            <p class="term-line term-dim">Neural Noir shell &middot; v1.0</p>
+            <p class="term-line term-dim">Portfolio snapshot loaded. Type <b>help</b> for the command list.</p>
+          </div>
+
+          <form class="terminal-input" id="termForm" autocomplete="off">
+            <label class="mono" for="termInput">ankit@neural:~$</label>
+            <input id="termInput" name="command" type="text" spellcheck="false" autocapitalize="off" autocorrect="off" aria-label="Terminal command" placeholder="help" />
+          </form>
+        </div>
+
+        <p class="terminal-note mono">Commands: help &middot; about &middot; skills &middot; projects &middot; research &middot; contact &middot; clear</p>
+      </div>
+    </section>
+
+    <!-- ============================= CONTACT ============================= -->
+    <section class="section" id="contact">
+      <div class="container contact-inner reveal">
+        <header class="section-head">
+          <div>
+            <p class="section-label mono">09 &mdash; Contact</p>
+            <h2 class="section-title">Let's build something</h2>
+          </div>
+        </header>
+        <p class="contact-copy">I'm looking for an internship, junior role or open-source contribution where I can learn from experienced engineers. If you have a project, a question or just some feedback on my work, I'd genuinely like to hear it.</p>
+
+        <!-- Posts JSON to FORM_ENDPOINT (set in script.js). Until that is set,
+             submitting opens the visitor's email app with the message filled in. -->
+        <form class="contact-form" id="contactForm" data-email="ankitthapa83.dev@gmail.com" novalidate>
+          <div class="field">
+            <label for="cf-name">Name</label>
+            <input id="cf-name" name="name" type="text" autocomplete="name" placeholder="Your name" required />
+          </div>
+
+          <div class="field">
+            <label for="cf-email">Email</label>
+            <input id="cf-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required />
+          </div>
+
+          <div class="field">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" rows="5" placeholder="Tell me what you're working on, or what you'd like to talk about." required></textarea>
+          </div>
+
+          <!-- Honeypot: hidden from people, filled by bots. Leave as-is. -->
+          <div class="hp" aria-hidden="true">
+            <label for="cf-company">Company</label>
+            <input id="cf-company" name="company" type="text" tabindex="-1" autocomplete="off" />
+          </div>
+          <input type="hidden" name="sentAt" id="cf-sentAt" />
+
+          <button type="submit" class="btn btn-primary btn-large" id="cf-submit">Send message</button>
+
+          <p class="form-status" id="cf-status" role="status" aria-live="polite"></p>
+        </form>
+
+        <p class="contact-alt">Or email me directly at <a href="mailto:ankitthapa83.dev@gmail.com">ankitthapa83.dev@gmail.com</a></p>
+
+        <ul class="socials socials-center">
+          <li><a href="https://github.com/ankitthapa" target="_blank" rel="noopener">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/ankitthapa" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://x.com/ankitthapa" target="_blank" rel="noopener">X</a></li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <p class="logo"><span class="logo-mark" aria-hidden="true"></span>Er. Ankit Thapa</p>
+        <p class="footer-tagline">AI Engineer &middot; ML Enthusiast &middot; Kathmandu, Nepal</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#github">GitHub</a>
+        <a href="#terminal">Terminal</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <ul class="socials socials-footer">
+        <li><a href="https://github.com/ankitthapa" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/ankitthapa" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://x.com/ankitthapa" target="_blank" rel="noopener">X</a></li>
+        <li><a href="mailto:ankitthapa83.dev@gmail.com">Email</a></li>
+      </ul>
+    </div>
+
+    <div class="container footer-bottom">
+      <p class="mono">&copy; <span id="year"></span> Er. Ankit Thapa. All rights reserved.</p>
+      <p class="mono">Built with HTML, CSS &amp; vanilla JS &middot; <a href="#home">Back to top &uarr;</a></p>
+    </div>
+  </footer>
+
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; }</style></noscript>
+
+  <script src="script.js?v=2"></script>
+</body>
+</html>
